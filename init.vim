@@ -31,6 +31,9 @@ set clipboard=unnamed
 set runtimepath^=~/AppData/Local/nvim/ctrlp.vim/
 let g:rustfmt_autosave = 1
 set expandtab sts=4 ts=4 shiftwidth=4
+set tabstop=4
+set showmatch
+set showcmd
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
@@ -43,3 +46,6 @@ let g:syntastic_check_on_wq = 0
 
 set hidden
 cd C:/Workspace/
+
+" Mappings
+let mapleader="<Space>"
