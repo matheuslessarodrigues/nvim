@@ -24,7 +24,7 @@ let g:airline_theme='oceanicnext'
 
 set autoindent
 set list
-set listchars=tab:>-,trail:\~
+set listchars=tab:>\~,trail:\~
 set autowrite
 set equalalways
 set clipboard=unnamed
@@ -34,6 +34,11 @@ set expandtab sts=4 ts=4 shiftwidth=4
 set tabstop=4
 set showmatch
 set showcmd
+set splitbelow
+set splitright
+set ignorecase
+set smartcase
+set gdefault
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
@@ -48,4 +53,14 @@ set hidden
 cd C:/Workspace/
 
 " Mappings
-let mapleader="<Space>"
+let mapleader="\<SPACE>"
+
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>f :CtrlPMRUFiles<CR>
+

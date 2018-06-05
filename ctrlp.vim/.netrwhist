@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='C:/Programs/Neovim/bin'
 let g:netrw_dirhist_2='C:/Programs/Neovim'
 let g:netrw_dirhist_3='C:/Programs'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='C:/Workspace'
 let g:netrw_dirhist_5='C:/Workspace/Rust'
 let g:netrw_dirhist_6='C:/Workspace/Rust/verco'
 let g:netrw_dirhist_7='C:\Users\mathe\AppData\Local\nvim'
+let g:netrw_dirhist_8='C:/Users/mathe/Desktop'
