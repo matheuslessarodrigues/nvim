@@ -7,9 +7,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-sensible'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'bash install.sh'}
-Plug 'junegunn/fzf'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rust-lang/rust.vim'
+Plug 'matze/vim-move'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Theme
@@ -49,10 +50,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"let g:airline#extensions#tabline#enabled = 2
-let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline#extensions#tabline#left_sep = ' '
-
 set hidden
 cd C:/Workspace/
 
@@ -70,4 +67,10 @@ nnoremap Q @q
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
+
+nnoremap <TAB> <C-w>w
+
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-overwin-w)
 
