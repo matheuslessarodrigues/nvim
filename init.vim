@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 call plug#begin()
 " Themes
 Plug 'mhartington/oceanic-next'
@@ -25,8 +28,9 @@ let g:airline_theme='oceanicnext'
 
 set autoindent
 set list
-set listchars=tab:>\~,trail:\~
+set listchars=tab:»\ ,trail:·
 set autowrite
+set autoread
 set equalalways
 set clipboard=unnamed
 set runtimepath^=~/AppData/Local/nvim/ctrlp.vim/
@@ -40,6 +44,8 @@ set splitright
 set ignorecase
 set smartcase
 set gdefault
+
+let g:ctrlp_working_path_mode = 'ra'
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
@@ -69,9 +75,8 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 nnoremap <TAB> <C-w>w
-nnoremap <Leader>w :vsplit new<CR>
+nnoremap <Leader><TAB> :vsplit new<CR>
 
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-overwin-w)
-
