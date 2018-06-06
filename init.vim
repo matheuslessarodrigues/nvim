@@ -45,7 +45,7 @@ set ignorecase
 set smartcase
 set gdefault
 
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 0
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
