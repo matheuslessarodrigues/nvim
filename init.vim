@@ -64,8 +64,6 @@ let g:EasyMotion_smartcase = 1
 
 " LanguageClient
 let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rls'] }
-"nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loggingLevel = 'DEBUG'
 
@@ -83,6 +81,9 @@ endif
 nnoremap ; :
 nnoremap Q @q
 
+noremap <Leader>l $
+noremap <Leader>h 0
+
 nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>f :Lines<CR>
 nnoremap <Leader>b :Buffers<CR>
@@ -90,5 +91,12 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <TAB> <C-w>w
 nnoremap <Leader><TAB> :vsplit new<CR>
 nnoremap <Leader>w :close<CR>
+nnoremap <Leader>s :write<CR> :call LanguageClient#textDocument_formatting()<CR>
 
 nmap s <Plug>(easymotion-overwin-w)
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> <Leader>o :call LanguageClient#textDocument_documentSymbol()<CR>
+nnoremap <silent> <Leader>r :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <Leader>i :call LanguageClient#textDocument_references()<CR>
