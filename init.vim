@@ -65,10 +65,11 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 
 " LanguageClient
-let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rls'] }
 "nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_loggingLevel = 'DEBUG'
 
 " ================================================================== Key Mappings
 let mapleader="\<SPACE>"
