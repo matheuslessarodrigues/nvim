@@ -69,6 +69,7 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 nnoremap <TAB> <C-w>w
+nnoremap <Leader>w :vsplit new<CR>
 
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
