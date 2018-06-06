@@ -38,7 +38,6 @@ set autowrite
 set autoread
 set equalalways
 set clipboard=unnamed
-set runtimepath^=~/AppData/Local/nvim/ctrlp.vim/
 let g:rustfmt_autosave = 1
 set showmatch
 set showcmd
@@ -52,9 +51,6 @@ set hidden
 cd C:/Workspace/
 
 " ================================================================== Plugin Configs
-
-" CtrlP
-let g:ctrlp_working_path_mode = 0
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -73,6 +69,9 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loggingLevel = 'DEBUG'
 
+" Fzf
+let g:fzf_layout = { 'down': '~30%' }
+
 " ================================================================== Key Mappings
 let mapleader="\<SPACE>"
 
@@ -84,12 +83,12 @@ endif
 nnoremap ; :
 nnoremap Q @q
 
-nnoremap <Leader>u :CtrlP<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>f :CtrlPMRUFiles<CR>
+nnoremap <Leader>p :Files<CR>
+nnoremap <Leader>f :Lines<CR>
+nnoremap <Leader>b :Buffers<CR>
 
 nnoremap <TAB> <C-w>w
 nnoremap <Leader><TAB> :vsplit new<CR>
-nnoremap <Leader>w :q<CR>
+nnoremap <Leader>w :close<CR>
 
 nmap s <Plug>(easymotion-overwin-w)
