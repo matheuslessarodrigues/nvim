@@ -100,3 +100,5 @@ nnoremap <silent> <Leader>o :call LanguageClient#textDocument_documentSymbol()<C
 nnoremap <silent> <Leader>r :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <Leader>i :call LanguageClient#textDocument_references()<CR>
+
+inoremap <C-Space> <C-x><C-o>
