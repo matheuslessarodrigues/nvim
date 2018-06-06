@@ -9,6 +9,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-sensible'
+"Plug 'OmniSharp/omnisharp-vim'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'powershell -executionpolicy bypass -File install.ps1'}
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -62,10 +63,17 @@ let g:syntastic_check_on_wq = 0
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 
+" OmniSharp
+"let g:OmniSharp_server_path = 'OmniSharp.exe'
+"let g:OmniSharp_selector_ui = 'fzf'
+"let g:syntastic_cs_checkers = ['code_checker']
+
 " LanguageClient
-let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rls'] }
+let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rls'], 'cs': ['omnisharp'] }
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loggingLevel = 'DEBUG'
+
+"autocmd FileType rust setlocal omnifunc=LanguageClient#complete
 
 " Fzf
 let g:fzf_layout = { 'down': '~30%' }
