@@ -9,7 +9,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-sensible'
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'bash install.sh'}
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'powershell -executionpolicy bypass -File install.ps1'}
 Plug 'rust-lang/rust.vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
