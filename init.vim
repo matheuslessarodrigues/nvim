@@ -65,6 +65,7 @@ let g:syntastic_check_on_wq = 0
 " EasyMotion
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
 
 " OmniSharp
 filetype plugin on
@@ -93,8 +94,8 @@ endif
 nnoremap ; :
 nnoremap Q @q
 
-noremap <Leader>l $
-noremap <Leader>h 0
+noremap <Leader>h ^
+noremap <Leader>l g_
 
 nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>f :Lines<CR>
