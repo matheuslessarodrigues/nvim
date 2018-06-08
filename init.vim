@@ -93,11 +93,13 @@ endif
 nnoremap ; :
 nnoremap Q @q
 
-noremap <C-h> b
-noremap <C-l> w
+nnoremap <C-h> b
+nnoremap <C-l> w
+nnoremap <C-k> <C-u>
+nnoremap <C-j> <C-d>
 
-noremap <Leader>h ^
-noremap <Leader>l g_
+nnoremap <Leader>h ^
+nnoremap <Leader>l g_
 
 nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>f :Lines<CR>
