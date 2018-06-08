@@ -85,10 +85,8 @@ let g:fzf_layout = { 'down': '~30%' }
 " ================================================================== Key Mappings
 let mapleader="\<SPACE>"
 
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-	nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
+" Use <C-d> to clear the highlighting of :set hlsearch.
+nnoremap <C-d> :nohlsearch<CR>
 
 nnoremap ; :
 nnoremap Q @q
