@@ -9,13 +9,15 @@ Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-sensible'
+if 0
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'powershell -executionpolicy bypass -File install.ps1'}
+endif
+Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'matze/vim-move'
-Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " ================================================================== Theme
@@ -54,7 +56,7 @@ cd C:/Workspace/
 " ================================================================== Plugin Configs
 
 " Python
-g:python3_host_prog = 'python'
+"g:python3_host_prog = 'python'
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -62,11 +64,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" EasyMotion
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
-
+if 0
 " OmniSharp
 filetype plugin on
 let g:OmniSharp_server_path = 'OmniSharp.exe'
@@ -78,7 +76,8 @@ let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rl
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loggingLevel = 'DEBUG'
 
-"autocmd FileType rust setlocal omnifunc=LanguageClient#complete
+autocmd FileType rust setlocal omnifunc=LanguageClient#complete
+endif
 
 " Fzf
 let g:fzf_layout = { 'down': '~30%' }
@@ -106,10 +105,14 @@ nnoremap <Leader><TAB> :vsplit new<CR>
 nnoremap <Leader>w :close<CR>
 nnoremap <C-s> :write<CR>
 
-map s <Plug>(easymotion-overwin-w)
+let g:sneak#label = 1
+let g:sneak#prompt = 'Sneak >'
+map m <Plug>Sneak_,
+map , <Plug>Sneak_;
 
 inoremap <C-Space> <C-x><C-o>
 
+if 0
 augroup language_client_commands
 	autocmd FileType rust nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 	autocmd FileType rust nnoremap <silent> <Leader>o :call LanguageClient#textDocument_documentSymbol()<CR>
@@ -158,4 +161,5 @@ augroup omnisharp_commands
 	autocmd FileType cs nnoremap <Leader>rl :OmniSharpReloadSolution<CR>
 	autocmd FileType cs nnoremap <A-f> :OmniSharpCodeFormat<CR>
 augroup END
+endif
 
