@@ -93,6 +93,9 @@ endif
 nnoremap ; :
 nnoremap Q @q
 
+noremap <C-h> b
+noremap <C-l> w
+
 noremap <Leader>h ^
 noremap <Leader>l g_
 
@@ -100,8 +103,8 @@ nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>f :Lines<CR>
 nnoremap <Leader>b :Buffers<CR>
 
-nnoremap <TAB> <C-w>w
-nnoremap <Leader><TAB> :vsplit new<CR>
+nmap <Leader><TAB> <C-w>w
+nnoremap <Leader>W :vsplit new<CR>
 nnoremap <Leader>w :close<CR>
 nnoremap <C-s> :write<CR>
 
