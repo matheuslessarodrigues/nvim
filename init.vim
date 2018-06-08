@@ -104,7 +104,7 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <TAB> <C-w>w
 nnoremap <Leader><TAB> :vsplit new<CR>
 nnoremap <Leader>w :close<CR>
-nnoremap <Leader>s :write<CR>
+nnoremap <C-s> :write<CR>
 
 map s <Plug>(easymotion-overwin-w)
 
