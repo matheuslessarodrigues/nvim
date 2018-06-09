@@ -14,8 +14,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'powershell -executionpolicy bypass -File install.ps1'}
 endif
 Plug 'justinmk/vim-sneak'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'matze/vim-move'
 call plug#end()
@@ -58,6 +57,9 @@ cd C:/Workspace/
 " Python
 "g:python3_host_prog = 'python'
 
+" Rust
+let g:rustfmt_autosave = 1
+
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -68,7 +70,7 @@ if 0
 " OmniSharp
 filetype plugin on
 let g:OmniSharp_server_path = 'OmniSharp.exe'
-let g:OmniSharp_selector_ui = 'fzf'
+"let g:OmniSharp_selector_ui = 'fzf'
 let g:syntastic_cs_checkers = ['code_checker']
 
 " LanguageClient
@@ -79,8 +81,9 @@ let g:LanguageClient_loggingLevel = 'DEBUG'
 autocmd FileType rust setlocal omnifunc=LanguageClient#complete
 endif
 
-" Fzf
-let g:fzf_layout = { 'down': '~30%' }
+" CtrlP
+let g:ctrlp_working_path_mode = 0
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.dll,*\\Library\\*,*\\obj\\*,*.d,*.pdb
 
 " ================================================================== Key Mappings
 let mapleader="\<SPACE>"
@@ -91,17 +94,16 @@ nnoremap <C-d> :nohlsearch<CR>
 nnoremap ; :
 nnoremap Q @q
 
-nnoremap <C-h> b
-nnoremap <C-l> w
-nnoremap <C-k> <C-u>
-nnoremap <C-j> <C-d>
+noremap <C-h> b
+noremap <C-l> w
+noremap <C-k> <C-u>
+noremap <C-j> <C-d>
 
-nnoremap <Leader>h ^
-nnoremap <Leader>l g_
+noremap <Leader>h ^
+noremap <Leader>l g_
 
-nnoremap <Leader>p :Files<CR>
-nnoremap <Leader>f :Lines<CR>
-nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>p :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
 
 nmap <Leader><TAB> <C-w>w
 nnoremap <Leader>W :vsplit new<CR>
