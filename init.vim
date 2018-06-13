@@ -114,6 +114,8 @@ map m <Plug>Sneak_,
 map , <Plug>Sneak_;
 
 inoremap <C-Space> <C-x><C-o>
+inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 if 0
 augroup language_client_commands
