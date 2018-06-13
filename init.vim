@@ -9,10 +9,8 @@ Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-sensible'
-if 0
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'powershell -executionpolicy bypass -File install.ps1'}
-endif
+"Plug 'autozimu/LanguageClient-neovim', {'branch': 'next','do': 'powershell -executionpolicy bypass -File install.ps1'}
 Plug 'justinmk/vim-sneak'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rust-lang/rust.vim'
@@ -55,7 +53,7 @@ cd C:/Workspace/
 " ================================================================== Plugin Configs
 
 " Python
-"g:python3_host_prog = 'python'
+g:python3_host_prog = 'python'
 
 " Rust
 let g:rustfmt_autosave = 1
@@ -66,15 +64,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-if 0
 " OmniSharp
 filetype plugin on
 let g:OmniSharp_server_path = 'OmniSharp.exe'
-"let g:OmniSharp_selector_ui = 'fzf'
+let g:OmniSharp_selector_ui = 'ctrlp'
 let g:syntastic_cs_checkers = ['code_checker']
 
+if 0
 " LanguageClient
-let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rls'], 'cs': ['omnisharp'] }
+let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rls'] }
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loggingLevel = 'DEBUG'
 
@@ -83,7 +81,7 @@ endif
 
 " CtrlP
 let g:ctrlp_working_path_mode = 0
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.dll,*\\Library\\*,*\\obj\\*,*.d,*.pdb
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.dll,*\\Library\\*,*\\obj\\*,*.d,*.pdb,*.csproj,*.sln,*.orig
 
 " ================================================================== Key Mappings
 let mapleader="\<SPACE>"
@@ -126,6 +124,7 @@ augroup language_client_commands
 	autocmd FileType rust nnoremap <silent> <Leader>i :call LanguageClient#textDocument_references()<CR>
 	autocmd FileType rust nnoremap <A-f> :call LanguageClient#textDocument_formatting()<CR>
 augroup END
+endif
 
 augroup omnisharp_commands
 	autocmd!
@@ -146,11 +145,11 @@ augroup omnisharp_commands
 	" The following commands are contextual, based on the cursor position.
 	autocmd FileType cs nnoremap <buffer> <Leader>d :OmniSharpGotoDefinition<CR>
 	"autocmd FileType cs nnoremap <buffer> <Leader>d :OmniSharpFindImplementations<CR>
-	autocmd FileType cs nnoremap <buffer> <Leader>o :OmniSharpFindSymbol<CR>
-	autocmd FileType cs nnoremap <buffer> <Leader>i :OmniSharpFindUsages<CR>
+	autocmd FileType cs nnoremap <buffer> <Leader>t :OmniSharpFindSymbol<CR>
+	autocmd FileType cs nnoremap <buffer> <Leader>u :OmniSharpFindUsages<CR>
 
 	" Finds members in the current buffer
-	"autocmd FileType cs nnoremap <buffer> <Leader>fm :OmniSharpFindMembers<CR>
+	autocmd FileType cs nnoremap <buffer> <Leader>o :OmniSharpFindMembers<CR>
 
 	" Cursor can be anywhere on the line containing an issue
 	autocmd FileType cs nnoremap <buffer> <Leader>. :OmniSharpFixIssue<CR>
@@ -166,5 +165,4 @@ augroup omnisharp_commands
 	autocmd FileType cs nnoremap <Leader>rl :OmniSharpReloadSolution<CR>
 	autocmd FileType cs nnoremap <A-f> :OmniSharpCodeFormat<CR>
 augroup END
-endif
 
