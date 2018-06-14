@@ -53,7 +53,7 @@ cd C:/Workspace/
 " ================================================================== Plugin Configs
 
 " Python
-g:python3_host_prog = 'python'
+let g:python3_host_prog = 'python'
 
 " Rust
 let g:rustfmt_autosave = 1
@@ -83,6 +83,11 @@ endif
 let g:ctrlp_working_path_mode = 0
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.dll,*\\Library\\*,*\\obj\\*,*.d,*.pdb,*.csproj,*.sln,*.orig
 
+" Sneak
+let g:sneak#label = 1
+let g:sneak#prompt = 'Sneak >'
+let g:sneak#target_labels = "sftunqSFGHLTUNRMQZ0"
+
 " ================================================================== Key Mappings
 let mapleader="\<SPACE>"
 
@@ -108,10 +113,8 @@ nnoremap <Leader>W :vsplit new<CR>
 nnoremap <Leader>w :close<CR>
 nnoremap <C-s> :write<CR>
 
-let g:sneak#label = 1
-let g:sneak#prompt = 'Sneak >'
-map m <Plug>Sneak_,
-map , <Plug>Sneak_;
+map m <Plug>Sneak_;
+map M <Plug>Sneak_,
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
