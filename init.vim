@@ -27,14 +27,17 @@ syntax enable
 colorscheme OceanicNext
 let g:airline_theme='oceanicnext'
 
-set expandtab sts=4 ts=4 shiftwidth=4
-set autoindent
 set noexpandtab
-set tabstop=4
+set copyindent
+set preserveindent
+set sts=0 ts=4 sw=4
 
 set list
 set listchars=tab:»\ ,trail:·,space:·
-set autowrite
+set wrap
+set showbreak=~\ 
+set wrapscan
+set autowriteall
 set autoread
 set equalalways
 set clipboard=unnamed
@@ -59,16 +62,20 @@ let g:python3_host_prog = 'python'
 let g:rustfmt_autosave = 1
 
 " Syntastic
-let g:syntastic_always_populate_loc_list = 1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*let g:syntastic_always_populate_loc_list = 1
+
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_cs_checkers = ['code_checker']
 
 " OmniSharp
 filetype plugin on
 let g:OmniSharp_server_path = 'OmniSharp.exe'
 let g:OmniSharp_selector_ui = 'ctrlp'
-let g:syntastic_cs_checkers = ['code_checker']
 
 if 0
 " LanguageClient
@@ -81,7 +88,7 @@ endif
 
 " CtrlP
 let g:ctrlp_working_path_mode = 0
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.dll,*\\Library\\*,*\\obj\\*,*.d,*.pdb,*.csproj,*.sln,*.orig
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.dll,*\\Library\\*,*\\obj\\*,*.d,*.pdb,*.csproj,*.sln,*.orig,*.mat,*.prefab,*.controller,*.colors
 
 " Sneak
 let g:sneak#label = 1
