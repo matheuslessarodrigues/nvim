@@ -11,11 +11,13 @@ Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " settings
 colorscheme OceanicNext
-let g:airline_theme='oceanicnext' 
+let g:airline_theme='oceanicnext'
 
 set noexpandtab
 set copyindent
@@ -23,9 +25,9 @@ set preserveindent
 set sts=0 ts=4 sw=4
 
 set list
-set listchars=tab:>\ ,trail:.
+set listchars=trail:.,extends:>,precedes:<,nbsp:~,tab:.\ "
 set wrap
-set showbreak=~\
+set showbreak=~\ "
 set autowriteall
 set autoread
 set equalalways
@@ -89,8 +91,8 @@ inoremap <C-Space> <C-x><C-o>
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
-nnoremap <Leader>p :find 
-nnoremap <Leader>b :buffer 
+nnoremap <Leader>p :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
 
 " plugin configs
 
