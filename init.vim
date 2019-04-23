@@ -1,14 +1,10 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-" initial config
-vsplit new
-
 " plugin manager
 call plug#begin()
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
 
-Plug 'vim-airline/vim-airline'
 Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
 Plug 'junegunn/fzf'
@@ -16,8 +12,7 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " settings
-colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+"colorscheme OceanicNext
 
 set noexpandtab
 set copyindent
@@ -88,8 +83,8 @@ nnoremap <Leader>w :close<CR>
 nnoremap <C-s> :write<CR>
 
 inoremap <C-Space> <C-x><C-o>
-inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
-inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+inoremap <expr> j ((pumvisible())?('\<C-n>'):('j'))
+inoremap <expr> k ((pumvisible())?('\<C-p>'):('k'))
 
 nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
@@ -99,6 +94,6 @@ nnoremap <Leader>b :Buffers<CR>
 " sneak
 let g:sneak#prompt = 'Sneak >'
 let g:sneak#target_labels = "sftunqSFGHLTUNRMQZ0"
-map m <Plug>Sneak_;
-map M <Plug>Sneak_,
-
+let g:sneak#s_next = 1
+map <expr> n ((sneak#is_sneaking())?'<Plug>Sneak_;':'n')
+map <expr> N ((sneak#is_sneaking())?'<Plug>Sneak_,':'N')
