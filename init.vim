@@ -1,27 +1,21 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+" initial config
+vsplit new
+
+" plugin manager
 call plug#begin()
-" ================================================================== Themes
 Plug 'mhartington/oceanic-next'
 
-" ================================================================== Plugins
 Plug 'vim-airline/vim-airline'
-Plug 'vim-syntastic/syntastic'
-Plug 'tpope/vim-sensible'
 Plug 'justinmk/vim-sneak'
 Plug 'matze/vim-move'
 call plug#end()
 
-" ================================================================== Theme
-if (has("termguicolors"))
-	set termguicolors
-endif
-
-syntax on
-syntax enable
+" settings
 colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+let g:airline_theme='oceanicnext' 
 
 set noexpandtab
 set copyindent
@@ -29,10 +23,9 @@ set preserveindent
 set sts=0 ts=4 sw=4
 
 set list
-set listchars=tab:�\ ,trail:�,space:�
+set listchars=tab:>\ ,trail:.
 set wrap
 set showbreak=~\
-set wrapscan
 set autowriteall
 set autoread
 set equalalways
@@ -45,35 +38,37 @@ set ignorecase
 set smartcase
 set gdefault
 set hidden
+:autocmd VimResized * wincmd =
 
-cd C:/Workspace/
+" enter the current millenium
+set nocompatible
 
-" ================================================================== Plugin Configs
+" enable syntax and plugins (for netrw)
+syntax on
+syntax enable
+filetype plugin on
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*let g:syntastic_always_populate_loc_list = 1
+" search down into subfolders
+" provides tab-completion for all file-related tasks
+set path+=**
 
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" display all matching files when we tab complete
+set wildmenu
 
-let g:syntastic_cs_checkers = ['code_checker']
+" tweaks for browsing
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
-" Sneak
-let g:sneak#label = 1
-let g:sneak#prompt = 'Sneak >'
-let g:sneak#target_labels = "sftunqSFGHLTUNRMQZ0"
-
-" ================================================================== Key Mappings
+" keymaps
 let mapleader="\<SPACE>"
 
-" Use <C-d> to clear the highlighting of :set hlsearch.
 nnoremap <C-d> :nohlsearch<CR>
 
 nnoremap ; :
-nnoremap Q @q
 
 noremap <C-h> b
 noremap <C-l> w
@@ -82,18 +77,26 @@ noremap <C-j> <C-d>
 
 noremap <Leader>h ^
 noremap <Leader>l g_
-
-nnoremap <Leader>p :CtrlP<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
+noremap <Leader>k gg
+noremap <Leader>j G
 
 nmap <Leader><TAB> <C-w>w
 nnoremap <Leader>W :vsplit new<CR>
 nnoremap <Leader>w :close<CR>
 nnoremap <C-s> :write<CR>
 
-map m <Plug>Sneak_;
-map M <Plug>Sneak_,
-
 inoremap <C-Space> <C-x><C-o>
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+
+nnoremap <Leader>p :find 
+nnoremap <Leader>b :buffer 
+
+" plugin configs
+
+" sneak
+let g:sneak#prompt = 'Sneak >'
+let g:sneak#target_labels = "sftunqSFGHLTUNRMQZ0"
+map m <Plug>Sneak_;
+map M <Plug>Sneak_,
+
