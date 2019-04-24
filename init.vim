@@ -77,7 +77,7 @@ noremap <Leader>l g_
 noremap <Leader>k gg
 noremap <Leader>j G
 
-nmap <Leader><TAB> <C-w>w
+nmap <TAB> <C-w>w
 nnoremap <Leader>W :vsplit new<CR>
 nnoremap <Leader>w :close<CR>
 nnoremap <C-s> :write<CR>
@@ -93,7 +93,7 @@ nnoremap <Leader>b :Buffers<CR>
 
 " sneak
 let g:sneak#prompt = 'Sneak >'
-let g:sneak#target_labels = "sftunqSFGHLTUNRMQZ0"
+let g:sneak#target_labels = "sftumqSFGHLTURMQZ0"
 let g:sneak#s_next = 1
 map <expr> n ((sneak#is_sneaking())?'<Plug>Sneak_;':'n')
 map <expr> N ((sneak#is_sneaking())?'<Plug>Sneak_,':'N')
