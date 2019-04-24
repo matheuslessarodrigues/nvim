@@ -97,3 +97,4 @@ let g:sneak#target_labels = "sftunqSFGHLTUNRMQZ0"
 let g:sneak#s_next = 1
 map <expr> n ((sneak#is_sneaking())?'<Plug>Sneak_;':'n')
 map <expr> N ((sneak#is_sneaking())?'<Plug>Sneak_,':'N')
+
