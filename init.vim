@@ -7,7 +7,7 @@ autocmd VimEnter * :Ex
 
 " plugin manager
 call plug#begin()
-" Plug 'mhartington/oceanic-next'
+Plug 'mhartington/oceanic-next'
 
 Plug 'justinmk/vim-sneak'
 Plug 'jceb/vim-orgmode'
@@ -17,7 +17,7 @@ Plug 'jceb/vim-orgmode'
 call plug#end()
 
 " settings
-"colorscheme OceanicNext
+colorscheme OceanicNext
 
 set noexpandtab
 set copyindent
