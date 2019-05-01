@@ -6,9 +6,9 @@ call plug#begin()
 " Plug 'mhartington/oceanic-next'
 
 Plug 'justinmk/vim-sneak'
-Plug 'matze/vim-move'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+" Plug 'matze/vim-move'
+" Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " settings
