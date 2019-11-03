@@ -1,19 +1,9 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-" init at notes folder
-cd P:/notes
-autocmd VimEnter * :Ex
-
 " plugin manager
 call plug#begin()
 Plug 'mhartington/oceanic-next'
-
-Plug 'justinmk/vim-sneak'
-Plug 'jceb/vim-orgmode'
-" Plug 'matze/vim-move'
-" Plug 'junegunn/fzf'
-" Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " settings
@@ -66,41 +56,7 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " keymaps
-let mapleader="\<SPACE>"
-
-nnoremap <C-d> :nohlsearch<CR>
-
+nnoremap <ESC> :nohlsearch<CR>
 nnoremap ; :
-
-noremap <C-h> b
-noremap <C-l> w
-noremap <C-k> <C-u>
-noremap <C-j> <C-d>
-
-noremap <Leader>h ^
-noremap <Leader>l g_
-noremap <Leader>k gg
-noremap <Leader>j G
-
-nmap <TAB> <C-w>w
-nnoremap <Leader>W :vsplit new<CR>
-nnoremap <Leader>w :close<CR>
-nnoremap <C-s> :write<CR>
-nnoremap <Leader>q :qa<CR>
-
-inoremap <C-Space> <C-x><C-o>
-inoremap <expr> j ((pumvisible())?('\<C-n>'):('j'))
-inoremap <expr> k ((pumvisible())?('\<C-p>'):('k'))
-
-nnoremap <Leader>p :find 
-nnoremap <Leader>b :b 
-
-" plugin configs
-
-" sneak
-let g:sneak#prompt = 'Sneak >'
-let g:sneak#target_labels = "sftumqSFGHLTURMQZ0"
-let g:sneak#s_next = 1
-map <expr> n ((sneak#is_sneaking())?'<Plug>Sneak_;':'n')
-map <expr> N ((sneak#is_sneaking())?'<Plug>Sneak_,':'N')
-
+nnoremap s /
+nnoremap S ?
