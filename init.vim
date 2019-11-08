@@ -1,19 +1,26 @@
-set signcolumn=yes
 scriptencoding utf-8
 set encoding=utf-8
 
 " plugin manager
 call plug#begin()
-Plug 'mhartington/oceanic-next'
+Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" settings
-colorscheme OceanicNext
+" theme
+let g:gruvbox_contrast_dark='soft'
+colorscheme GruvBox
 
+if exists('g:GuiLoaded')
+	autocmd VimEnter * GuiFont! Cascadia\ Code:h11
+	autocmd VimEnter * GuiPopupmenu 0
+	autocmd VimEnter * GuiTabline 0
+endif
+
+" settings
 set noexpandtab
 set copyindent
 set preserveindent
@@ -40,8 +47,6 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 autocmd VimResized * wincmd =
-autocmd VimEnter * GuiPopupmenu 0
-autocmd VimEnter * GuiTabline 0
 
 " enter the current millenium
 set nocompatible
@@ -67,7 +72,7 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " keymaps
-let mapleader = "\<Space>"
+let mapleader = '\<Space>'
 
 nnoremap <ESC> :nohlsearch<CR>
 nnoremap <C-s> :w<CR>
@@ -80,7 +85,7 @@ nnoremap <C-b> :Buffers<CR>
 
 " coc
 inoremap <silent><expr> <C-Space> coc#refresh()
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : '\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>'
 
 nmap <Leader>cd :CocList diagnostics<CR>
 nmap <Leader>cc :CocCommand<CR>
