@@ -40,6 +40,8 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 autocmd VimResized * wincmd =
+autocmd VimEnter * GuiPopupmenu 0
+autocmd VimEnter * GuiTabline 0
 
 " enter the current millenium
 set nocompatible
