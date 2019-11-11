@@ -47,7 +47,7 @@ autocmd FocusGained * :silent! noautocmd checktime
 function UploadConfig()
 	let root = getcwd() 
 	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h') 
-	:execute '!git commit -m "update"' 
+	:execute '!git commit -a -m "update"' 
 	:execute '!git push' 
 	:execute 'cd ' . root
 endfunction
