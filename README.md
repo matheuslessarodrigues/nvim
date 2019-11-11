@@ -15,3 +15,8 @@ git clone git@github.com:matheuslessarodrigues/nvim.git $env:LocalAppData/nvim
 ## init.vim
 
 `:e $MYVIMRC` to edit your init.vim
+
+## Sync Settings
+
+`:call DownloadSettings()`
+`:call UploadSettings()`
