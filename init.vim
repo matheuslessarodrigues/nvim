@@ -106,7 +106,8 @@ nnoremap <C-t> :<C-u>CocList -I symbols<CR>
 
 inoremap <silent><expr> <C-Space> coc#refresh()
 inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
-inoremap <expr><TAB> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 nmap <Leader>cd :CocList diagnostics<CR>
 nmap <Leader>cc :CocCommand<CR>
