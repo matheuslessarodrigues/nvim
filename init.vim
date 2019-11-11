@@ -44,7 +44,7 @@ set shortmess+=c
 autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
 
-function UploadConfig()
+function UploadSettings()
 	let root = getcwd() 
 	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h') 
 	:execute '!git commit -a -m "update"' 
@@ -52,7 +52,7 @@ function UploadConfig()
 	:execute 'cd ' . root
 endfunction
 
-function DownloadConfig()
+function DownloadSettings()
 	let root = getcwd() 
 	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h') 
 	:execute '!git pull' 
