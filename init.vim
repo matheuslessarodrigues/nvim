@@ -123,7 +123,7 @@ nmap <Leader>gs :CocList outline<CR>
 nmap <Leader>rr <Plug>(coc-rename):wa<CR>
 nmap <Leader>ra <Plug>(coc-codeaction)
 nmap <leader>rf <Plug>(coc-fix-current)
-nmap <leader>rF :Format<CR>
+nmap <leader>rF :call CocAction('format')<CR>
 
 nmap <Leader>di <Plug>(coc-diagnostic-info)
 nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
