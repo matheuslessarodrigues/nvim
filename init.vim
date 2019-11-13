@@ -83,21 +83,22 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_fastbrowse=0
 autocmd FileType netrw set nolist
+autocmd FileType netrw setl bufhidden=wipe
 
 " keymaps
 let mapleader = "\<Space>"
 
-nnoremap <ESC> :nohlsearch<CR>
-nnoremap <C-s> :w<CR>
+nnoremap <ESC> :<C-u>nohlsearch<CR>
+nnoremap <C-s> :<C-u>w<CR>
 nnoremap s /
 nnoremap S ?
-nnoremap <Leader>ge :Ex.<CR>
+nnoremap <Leader>ge :<C-u>Ex.<CR>
 
 " fzf
-nnoremap <C-p> :FZF<CR>
-nnoremap <C-b> :Buffers<CR>
-"nnoremap <C-f> :Rg<CR>
-nnoremap <C-f> :Rg 
+nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <C-b> :<C-u>Buffers<CR>
+"nnoremap <C-f> :<C-u>Rg<CR>
+nnoremap <C-f> :<C-u>Rg 
 
 let g:coc_global_extensions=['coc-omnisharp']
 
@@ -108,8 +109,8 @@ inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-nmap <Leader>cd :CocList diagnostics<CR>
-nmap <Leader>cc :CocCommand<CR>
+nmap <Leader>cd :<C-u>CocList diagnostics<CR>
+nmap <Leader>cc :<C-u>CocCommand<CR>
 
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
@@ -118,15 +119,14 @@ omap af <Plug>(coc-funcobj-a)
 
 nmap <Leader>gr <Plug>(coc-references)
 nmap <Leader>gd <Plug>(coc-definition)
-nmap <Leader>gs :CocList outline<CR>
+nmap <Leader>gs :<C-u>CocList outline<CR>
 
-nmap <Leader>rr <Plug>(coc-rename):wa<CR>
+nmap <Leader>rr <Plug>(coc-rename):<C-u>wa<CR>
 nmap <Leader>ra <Plug>(coc-codeaction)
 nmap <leader>rf <Plug>(coc-fix-current)
-nmap <leader>rF :call CocAction('format')<CR>
+nmap <leader>rF :<C-u>call CocAction('format')<CR>
+nmap <leader>rc :<C-u>CocList commands<CR>
 
 nmap <Leader>di <Plug>(coc-diagnostic-info)
 nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
-nmap <Leader>dE <Plug>(coc-diagnostic-previous-error) 
-nmap <Leader>dh :call CocAction('doHover')<CR>
-
+nmap <Leader>dh :<C-u>call CocAction('doHover')<CR>
