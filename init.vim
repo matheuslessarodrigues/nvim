@@ -96,10 +96,9 @@ nnoremap <Leader>ge :Ex.<CR>
 " fzf
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-b> :Buffers<CR>
-nnoremap <C-f> :Rg<CR>
+"nnoremap <C-f> :Rg<CR>
+nnoremap <C-f> :Rg 
 
-" coc
-command! -nargs=0 Format :call CocAction('format')
 let g:coc_global_extensions=['coc-omnisharp']
 
 nnoremap <C-t> :<C-u>CocList -I symbols<CR>
