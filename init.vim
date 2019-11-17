@@ -90,8 +90,6 @@ let mapleader = "\<Space>"
 
 nnoremap <ESC> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
-nnoremap s /
-nnoremap S ?
 nnoremap <Leader>ge :<C-u>Ex.<CR>
 
 " fzf
@@ -99,6 +97,7 @@ nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
 "nnoremap <C-f> :<C-u>Rg<CR>
 nnoremap <C-f> :<C-u>Rg 
+nnoremap s :<C-u>BLines<CR> 
 
 let g:coc_global_extensions=['coc-omnisharp']
 
