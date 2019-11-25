@@ -90,15 +90,17 @@ let mapleader = "\<Space>"
 
 nnoremap <ESC> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
-nnoremap <Leader>ge :<C-u>Ex.<CR>
+nnoremap <Leader>e :<C-u>Ex.<CR>
+nnoremap <Leader>bd :<C-u>bp<CR>:<C-u>bd<CR>
 
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
-"nnoremap <C-f> :<C-u>Rg<CR>
 nnoremap <C-f> :<C-u>Rg 
-nnoremap s :<C-u>BLines<CR> 
+nnoremap s /
+nnoremap S ?
 
+" coc
 let g:coc_global_extensions=['coc-omnisharp']
 
 nnoremap <C-t> :<C-u>CocList -I symbols<CR>
@@ -116,14 +118,14 @@ xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
-nmap <Leader>gr <Plug>(coc-references)
-nmap <Leader>gd <Plug>(coc-definition)
-nmap <Leader>gs :<C-u>CocList outline<CR>
+nmap gr <Plug>(coc-references)
+nmap gd <Plug>(coc-definition)
+nmap gs :<C-u>CocList outline<CR>
 
 nmap <Leader>rr <Plug>(coc-rename):<C-u>wa<CR>
 nmap <Leader>ra <Plug>(coc-codeaction)
 nmap <leader>rf <Plug>(coc-fix-current)
-nmap <leader>rF :<C-u>call CocAction('format')<CR>
+nmap <leader>rF :call CocAction('format')<CR>
 nmap <leader>rc :<C-u>CocList commands<CR>
 
 nmap <Leader>di <Plug>(coc-diagnostic-info)
