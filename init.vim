@@ -22,7 +22,7 @@ set preserveindent
 set sts=0 ts=4 sw=4
 
 set list
-set listchars=trail:.,extends:>,precedes:<,nbsp:~,tab:.\ 
+set listchars=trail:.,extends:>,precedes:<,nbsp:~,space:.,tab:.\ 
 set wrap
 set showbreak=~\ 
 set autowriteall
