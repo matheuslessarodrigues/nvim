@@ -91,7 +91,7 @@ let mapleader = "\<Space>"
 nnoremap <ESC> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
-nnoremap <Leader>bd :<C-u>bp<CR>:<C-u>bd<CR>
+nnoremap <Leader>w :<C-u>bd<CR>:<C-u>vsplit<CR>
 
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
