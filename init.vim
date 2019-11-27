@@ -92,6 +92,7 @@ nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>bd :<C-u>bd<CR>:<C-u>vsplit<CR>
 nnoremap <Leader>bp :<C-u>bp<CR>
+nnoremap <Leader>bn :<C-u>bn<CR>
 nnoremap <Leader>bo :<C-u>bufdo bd<CR>
 
 " fzf
