@@ -91,6 +91,7 @@ nnoremap <ESC> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>bd :<C-u>bd<CR>:<C-u>vsplit<CR>
+nnoremap <Leader>bp :<C-u>bp<CR>
 nnoremap <Leader>bo :<C-u>bufdo bd<CR>
 
 " fzf
