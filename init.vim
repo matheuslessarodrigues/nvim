@@ -76,11 +76,10 @@ set wildmenu
 
 " tweaks for browsing
 let g:netrw_banner=0
-let g:netrw_browse_split=4
+let g:netrw_browse_split=0
 let g:netrw_altv=1
-let g:netrw_liststyle=0
+let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_fastbrowse=0
 autocmd FileType netrw set nolist
 autocmd FileType netrw setl bufhidden=wipe
@@ -91,7 +90,8 @@ let mapleader = "\<Space>"
 nnoremap <ESC> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
-nnoremap <Leader>w :<C-u>bd<CR>:<C-u>vsplit<CR>
+nnoremap <Leader>bd :<C-u>bd<CR>:<C-u>vsplit<CR>
+nnoremap <Leader>bo :<C-u>bufdo bd<CR>
 
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
