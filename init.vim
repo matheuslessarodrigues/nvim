@@ -81,8 +81,8 @@ let g:netrw_altv=1
 let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_fastbrowse=0
-autocmd FileType netrw set nolist<BAR>setl bufhidden=wipe
-autocmd FileType netrw nnoremap <buffer> s /<BAR> nnoremap <buffer> S ?
+autocmd FileType netrw set nolist|setl bufhidden=wipe
+autocmd FileType netrw nnoremap <buffer> s /|nnoremap <buffer> S ?
 
 " keymaps
 let mapleader = "\<Space>"
@@ -91,7 +91,7 @@ nnoremap <ESC> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>b :<C-u>b#<CR>
-nnoremap <Leader>c :<C-u>bufdo bd<CR>
+nnoremap <Leader>0 :<C-u>%bd<CR>
 
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
