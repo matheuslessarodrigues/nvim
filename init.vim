@@ -56,13 +56,14 @@ function UploadSettings()
 	:execute '!git push' 
 	:execute 'cd ' . root
 endfunction
-
+command UploadSettings call UploadSettings()
 function DownloadSettings()
 	let root = getcwd() 
 	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h') 
 	:execute '!git pull' 
 	:execute 'cd ' . root
 endfunction
+command DownloadSettings call DownloadSettings()
 
 " enter the current millenium
 set nocompatible
