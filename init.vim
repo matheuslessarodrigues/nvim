@@ -94,6 +94,7 @@ autocmd FileType netrw nnoremap <buffer> s /|nnoremap <buffer> S ?
 let mapleader = "\<Space>"
 
 nnoremap <ESC> :<C-u>nohlsearch<CR>
+nnoremap <C-c> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>b :<C-u>b#<CR>
