@@ -43,18 +43,19 @@ autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
 
+command sh call termopen("pwsh")
 function UploadSettings()
-	let root = getcwd() 
-	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h') 
-	:execute '!git commit -a -m "update"' 
-	:execute '!git push' 
+	let root = getcwd()
+	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h')
+	:execute '!git commit -a -m "update"'
+	:execute '!git push'
 	:execute 'cd ' . root
 endfunction
 command UploadSettings call UploadSettings()
 function DownloadSettings()
-	let root = getcwd() 
-	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h') 
-	:execute '!git pull' 
+	let root = getcwd()
+	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h')
+	:execute '!git pull'
 	:execute 'cd ' . root
 endfunction
 command DownloadSettings call DownloadSettings()
