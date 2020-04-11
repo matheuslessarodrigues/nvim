@@ -3,16 +3,10 @@ set encoding=utf-8
 
 " plugin manager
 call plug#begin()
-Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
-
-" theme
-let g:gruvbox_contrast_dark='soft'
-colorscheme GruvBox
 
 " settings
 set cursorline
@@ -99,13 +93,13 @@ nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>b :<C-u>b#<CR>
 nnoremap <Leader>0 :<C-u>%bd<CR>
+nnoremap s /
+nnoremap S ?
 
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
-nnoremap s /
-nnoremap S ?
 
 " coc
 let g:coc_global_extensions=['coc-omnisharp']
@@ -138,36 +132,3 @@ nmap <leader>rc :<C-u>CocList commands<CR>
 nmap <Leader>di <Plug>(coc-diagnostic-info)
 nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
 nmap <Leader>dh :<C-u>call CocAction('doHover')<CR>
-
-" omnisharp
-"let g:OmniSharp_server_stdio = 1
-"let g:OmniSharp_selector_ui = 'fzf'
-"let g:OmniSharp_highlight_types = 3
-"
-"augroup omnisharp_commands
-"    autocmd!
-"
-"    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-"
-"    autocmd FileType cs nnoremap <buffer> <C-t> :<C-u>OmniSharpFindSymbol<CR>
-"
-"    autocmd FileType cs nnoremap <buffer> gr :<C-u>OmniSharpFindUsages<CR>
-"    autocmd FileType cs nnoremap <buffer> gd :<C-u>OmniSharpGotoDefinition<CR>
-"    autocmd FileType cs nnoremap <buffer> gi :<C-u>OmniSharpFindImplementations<CR>
-"    autocmd FileType cs nnoremap <buffer> gs :<C-u>OmniSharpFindMembers<CR>
-"    autocmd FileType cs nnoremap <buffer> gt :<C-u>OmniSharpTypeLookup<CR>
-"
-"	autocmd FileType cs nnoremap <buffer> <Leader>rr :<C-u>OmniSharpRename<CR>
-"	autocmd FileType cs nnoremap <buffer> <Leader>ra :<C-u>OmniSharpGetCodeActions<CR>
-"	autocmd FileType cs nnoremap <Leader>rF :<C-u>OmniSharpCodeFormat<CR>
-"    autocmd FileType cs nnoremap <buffer> <Leader>ru :<C-u>OmniSharpFixUsings<CR>
-"
-"    autocmd FileType cs nnoremap <buffer> <Leader>di :<C-u>OmniSharpSignatureHelp<CR>
-"    autocmd FileType cs nnoremap <buffer> <Leader>de :<C-u>OmniSharpGlobalCodeCheck<CR>
-"    autocmd FileType cs nnoremap <buffer> <Leader>dh :<C-u>OmniSharpDocumentation<CR>
-"
-"    autocmd FileType cs inoremap <buffer> <C-k><C-i> :<C-u>OmniSharpSignatureHelp<CR>
-"
-"    autocmd FileType cs nnoremap <buffer> <C-k> :<C-u>OmniSharpNavigateUp<CR>
-"    autocmd FileType cs nnoremap <buffer> <C-j> :<C-u>OmniSharpNavigateDown<CR>
-"augroup END
