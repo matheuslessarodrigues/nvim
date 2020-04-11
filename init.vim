@@ -8,12 +8,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " settings
-set shell=pwsh.exe
-set shellcmdflag=-NoProfile\ -NoLogo\ -NonInteractive\ -Command
-set shellpipe=|
-set shellredir=>
-let &shellxquote=' '
-
 set noexpandtab
 set copyindent
 set preserveindent
