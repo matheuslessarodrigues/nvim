@@ -8,7 +8,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " settings
-set cursorline
+set shell=pwsh
+"set cursorline
 set noexpandtab
 set copyindent
 set preserveindent
@@ -39,8 +40,10 @@ set previewheight=5
 
 filetype indent plugin on
 
+autocmd VimLeave * set guicursor=a:block-blinkon1
 autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
+autocmd TermOpen * startinsert
 
 function UploadSettings()
 	let root = getcwd() 
