@@ -18,5 +18,5 @@ git clone git@github.com:matheuslessarodrigues/nvim.git $env:LocalAppData/nvim
 
 ## Sync Settings
 
-- `:call DownloadSettings()`
-- `:call UploadSettings()`
+- `:DownloadSettings`
+- `:UploadSettings`
