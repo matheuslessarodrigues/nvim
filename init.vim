@@ -120,32 +120,32 @@ nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
 
 " coc
-let g:coc_global_extensions=['coc-omnisharp']
+"let g:coc_global_extensions=['coc-omnisharp']
 
-inoremap <silent><expr> <C-Space> coc#refresh()
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <silent><expr> <C-Space> coc#refresh()
+"inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+"inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-nmap <Leader>cd :<C-u>CocList diagnostics<CR>
-nmap <Leader>cc :<C-u>CocCommand<CR>
+"nmap <Leader>cd :<C-u>CocList diagnostics<CR>
+"nmap <Leader>cc :<C-u>CocCommand<CR>
 
-xmap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap if <Plug>(coc-funcobj-i)
-omap af <Plug>(coc-funcobj-a)
+"xmap if <Plug>(coc-funcobj-i)
+"xmap af <Plug>(coc-funcobj-a)
+"omap if <Plug>(coc-funcobj-i)
+"omap af <Plug>(coc-funcobj-a)
 
-nmap gr <Plug>(coc-references)
-nmap gd <Plug>(coc-definition)
-nmap gs :<C-u>CocList outline<CR>
-nnoremap gS :<C-u>CocList -I symbols<CR>
+"nmap gr <Plug>(coc-references)
+"nmap gd <Plug>(coc-definition)
+"nmap gs :<C-u>CocList outline<CR>
+"nnoremap gS :<C-u>CocList -I symbols<CR>
 
-nmap <Leader>rr <Plug>(coc-rename):<C-u>wa<CR>
-nmap <Leader>ra <Plug>(coc-codeaction)
-nmap <leader>rf <Plug>(coc-fix-current)
-nmap <leader>rF :call CocAction('format')<CR>
-nmap <leader>rc :<C-u>CocList commands<CR>
+"nmap <Leader>rr <Plug>(coc-rename):<C-u>wa<CR>
+"nmap <Leader>ra <Plug>(coc-codeaction)
+"nmap <leader>rf <Plug>(coc-fix-current)
+"nmap <leader>rF :call CocAction('format')<CR>
+"nmap <leader>rc :<C-u>CocList commands<CR>
 
-nmap <Leader>di <Plug>(coc-diagnostic-info)
-nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
-nmap <Leader>dh :<C-u>call CocAction('doHover')<CR>
+"nmap <Leader>di <Plug>(coc-diagnostic-info)
+"nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
+"nmap <Leader>dh :<C-u>call CocAction('doHover')<CR>
