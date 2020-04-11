@@ -4,7 +4,7 @@ Neovim configs
 ## Start
 
 ```
-git clone https://github.com/matheuslessarodrigues/nvim.git $env:LocalAppData/nvim
+git clone git@github.com:matheuslessarodrigues/nvim.git $env:LocalAppData/nvim
 ```
 
 ## Plugin Manager
