@@ -92,13 +92,27 @@ nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>b :<C-u>b#<CR>
 nnoremap <Leader>0 :<C-u>%bd<CR>
+
 nnoremap s /
 nnoremap S ?
+
+vnoremap s /
+vnoremap S ?
+
+nnoremap gh 0
+nnoremap gl $
+nnoremap gj G
+nnoremap gk G
+
+vnoremap gh 0
+vnoremap gl $
+vnoremap gj G
+vnoremap gk G
 
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
-nnoremap <C-f> :<C-u>Rg 
+nnoremap <C-f> :<C-u>Rg
 
 " coc
 let g:coc_global_extensions=['coc-omnisharp']
