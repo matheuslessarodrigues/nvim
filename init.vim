@@ -43,7 +43,7 @@ autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
 
-command sh call termopen("pwsh")
+command Sh call termopen("pwsh")
 function UploadSettings()
 	let root = getcwd()
 	:execute 'cd ' . fnamemodify($MYVIMRC, ':p:h')
