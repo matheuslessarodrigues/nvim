@@ -3,6 +3,7 @@ set encoding=utf-8
 
 " plugin manager
 call plug#begin()
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -116,7 +117,7 @@ vnoremap gk gg
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
-nnoremap <C-f> :<C-u>Rg
+nnoremap <C-f> :<C-u>Rg 
 
 " coc
 let g:coc_global_extensions=['coc-omnisharp']
