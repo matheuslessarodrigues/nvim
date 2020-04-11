@@ -115,7 +115,7 @@ vnoremap gj G
 vnoremap gk gg
 
 " fzf
-nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <C-p> :<C-u>Files<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
 
