@@ -84,15 +84,17 @@ autocmd FileType netrw set nolist|setl bufhidden=wipe
 autocmd FileType netrw nnoremap <buffer> s /|nnoremap <buffer> S ?
 
 " keymaps
-let mapleader = "\<Space>"
+let mapleader="\<Space>"
 
-nnoremap <ESC> :<C-u>nohlsearch<CR>
+nmap <C-z> <Nop>
+nnoremap <Esc> :<C-u>nohlsearch<CR>
 nnoremap <C-c> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
 nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>b :<C-u>b#<CR>
 nnoremap <Leader>0 :<C-u>%bd<CR>
 
+nnoremap U <C-r>
 nnoremap s /
 nnoremap S ?
 
@@ -102,12 +104,12 @@ vnoremap S ?
 nnoremap gh 0
 nnoremap gl $
 nnoremap gj G
-nnoremap gk G
+nnoremap gk gg
 
 vnoremap gh 0
 vnoremap gl $
 vnoremap gj G
-vnoremap gk G
+vnoremap gk gg
 
 " fzf
 nnoremap <C-p> :<C-u>FZF<CR>
@@ -116,8 +118,6 @@ nnoremap <C-f> :<C-u>Rg
 
 " coc
 let g:coc_global_extensions=['coc-omnisharp']
-
-nnoremap <C-t> :<C-u>CocList -I symbols<CR>
 
 inoremap <silent><expr> <C-Space> coc#refresh()
 inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
@@ -135,6 +135,7 @@ omap af <Plug>(coc-funcobj-a)
 nmap gr <Plug>(coc-references)
 nmap gd <Plug>(coc-definition)
 nmap gs :<C-u>CocList outline<CR>
+nnoremap gS :<C-u>CocList -I symbols<CR>
 
 nmap <Leader>rr <Plug>(coc-rename):<C-u>wa<CR>
 nmap <Leader>ra <Plug>(coc-codeaction)
