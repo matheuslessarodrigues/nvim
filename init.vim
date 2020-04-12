@@ -44,6 +44,7 @@ autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
 
+set shell=cmd
 command Sh call termopen("ash")
 
 function UploadSettings()
