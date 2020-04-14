@@ -103,10 +103,10 @@ nnoremap <Leader>0 :<C-u>%bd<CR>
 
 nnoremap U <C-r>
 nnoremap s /
-nnoremap S ?
+nnoremap S <Nop>
 
 vnoremap s /
-vnoremap S ?
+vnoremap S <Nop>
 
 nnoremap gh 0
 nnoremap gl $
