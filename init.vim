@@ -1,11 +1,13 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+set shell=$COMSPEC
+
 " plugin manager
 call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " settings
@@ -44,7 +46,6 @@ autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
 
-set shell=cmd
 command Sh call termopen("ash")
 
 function UploadSettings()
