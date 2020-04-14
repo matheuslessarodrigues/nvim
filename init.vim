@@ -45,6 +45,7 @@ autocmd VimLeave * set guicursor=a:block-blinkon1
 autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
+autocmd TermClose * bd!
 
 command Sh call termopen("ash")
 command Verco :terminal verco<CR>
