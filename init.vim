@@ -46,7 +46,9 @@ autocmd VimResized * wincmd =
 autocmd FocusGained * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
 
+mmand Verco :terminal verco<CR>
 command Sh call termopen("ash")
+command Verco :terminal verco<CR>
 
 function UploadSettings()
 	let root = getcwd()
