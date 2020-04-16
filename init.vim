@@ -1,4 +1,3 @@
-
 set shell=$COMSPEC
 
 " plugin manager
