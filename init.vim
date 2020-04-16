@@ -1,5 +1,3 @@
-scriptencoding utf-8
-set encoding=utf-8
 
 set shell=$COMSPEC
 
@@ -11,6 +9,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " settings
+set notermguicolors
+colorscheme torte
+
 set noexpandtab
 set copyindent
 set preserveindent
@@ -130,7 +131,7 @@ nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
 
 " coc
-let g:coc_global_extensions=['coc-omnisharp']
+let g:coc_global_extensions=['coc-omnisharp', 'coc-rust-analyzer']
 
 inoremap <silent><expr> <C-Space> coc#refresh()
 inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
