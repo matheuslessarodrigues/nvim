@@ -94,7 +94,6 @@ autocmd FileType netrw nnoremap <buffer> s /|nnoremap <buffer> S ?
 " keymaps
 let mapleader="\<Space>"
 
-nmap <C-z> <Nop>
 nnoremap <Esc> :<C-u>nohlsearch<CR>
 nnoremap <C-c> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
@@ -159,3 +158,19 @@ nmap <Leader>rc :<C-u>CocList commands<CR>
 nmap <Leader>dd <Plug>(coc-diagnostic-info)
 nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
 nmap <Leader>di :<C-u>call CocAction('doHover')<CR>
+
+" session
+function SaveSessionAndClose()
+	:wall
+	:mksession! session.vim
+	:qall
+endfunction
+
+function TryRestoreSession()
+	if filereadable("session.vim")
+		:source session.vim
+	:endif
+endfunction
+
+nmap <C-z> :call SaveSessionAndClose()<CR>
+call TryRestoreSession()
