@@ -167,8 +167,9 @@ function SaveSessionAndClose()
 endfunction
 
 function TryRestoreSession()
-	if filereadable("session.vim")
+	:if filereadable("session.vim")
 		:source session.vim
+		:call delete("session.vim")
 	:endif
 endfunction
 
