@@ -9,7 +9,7 @@ call plug#end()
 
 " settings
 set notermguicolors
-colorscheme torte
+colorscheme koehler
 
 set noexpandtab
 set copyindent
