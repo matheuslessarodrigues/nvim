@@ -2,6 +2,7 @@ set shell=$COMSPEC
 
 " plugin manager
 call plug#begin()
+"Plug 'neovim/nvim-lsp'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -47,7 +48,7 @@ autocmd FocusGained * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
 autocmd TermClose * bd!
 
-command Sh call termopen("ash")
+command Sh call termopen("busybox bash")
 command Verco :terminal verco<CR>
 
 function UploadSettings()
@@ -123,6 +124,35 @@ onoremap gl $
 onoremap gj G
 onoremap gk gg
 
+" lsp
+"set omnifunc=v:lua.vim.lsp.omnifunc
+
+"nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+"nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+"nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+"nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+"nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+"nnoremap <silent> gt <cmd>lua vim.lsp.buf.type_definition()<CR>
+"nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+"nnoremap <silent> gs <cmd>lua vim.lsp.buf.document_symbol()<CR>
+
+"lua << EOF
+"local nvim_lsp = require'nvim_lsp'
+"local configs = require'nvim_lsp/configs'
+
+"nvim_lsp.rust_analyzer.setup{}
+
+"configs.omnisharp_lsp = {
+"	default_config = {
+"		cmd = {'omnisharp'};
+"		filetypes = {'cs'};
+"		root_dir = nvim_lsp.util.root_pattern('*.sln');
+"		settings = {};
+"	};
+"}
+"nvim_lsp.omnisharp_lsp.setup{}
+"EOF
+
 " fzf
 nnoremap <C-p> :<C-u>Files<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
@@ -148,6 +178,7 @@ nmap gr <Plug>(coc-references)
 nmap gd <Plug>(coc-definition)
 nmap gs :<C-u>CocList outline<CR>
 nnoremap gS :<C-u>CocList -I symbols<CR>
+nmap K :<C-u>call CocAction('doHover')<CR>
 
 nmap <Leader>rr <Plug>(coc-rename):<C-u>wa<CR>
 nmap <Leader>ra <Plug>(coc-codeaction)
@@ -157,7 +188,6 @@ nmap <Leader>rc :<C-u>CocList commands<CR>
 
 nmap <Leader>dd <Plug>(coc-diagnostic-info)
 nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
-nmap <Leader>di :<C-u>call CocAction('doHover')<CR>
 
 " session
 function SaveSessionAndClose()
