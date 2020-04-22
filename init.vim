@@ -2,6 +2,7 @@ set shell=$COMSPEC
 
 " plugin manager
 call plug#begin()
+Plug 'morhetz/gruvbox'
 "Plug 'neovim/nvim-lsp'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -9,8 +10,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " settings
-set notermguicolors
-colorscheme ron
+set termguicolors
+colorscheme gruvbox
 
 set noexpandtab
 set copyindent
