@@ -103,6 +103,7 @@ nnoremap <Leader>e :<C-u>Ex.<CR>
 nnoremap <Leader>b :<C-u>b#<CR>
 nnoremap <Leader>0 :<C-u>%bd<CR>
 
+map Q <Nop>
 nnoremap U <C-r>
 nnoremap s /
 nnoremap S <Nop>
