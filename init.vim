@@ -105,31 +105,48 @@ nnoremap <Leader>b :<C-u>b#<CR>
 nnoremap <Leader>0 :<C-u>%bd<CR>
 
 map Q <Nop>
+map r <Nop>
 nnoremap U <C-r>
+nnoremap gv <C-v>
+
+nnoremap zj zb
+nnoremap zk zt
+
 nnoremap s /
 nnoremap S <Nop>
 
 vnoremap s /
 vnoremap S <Nop>
 
-nnoremap gh 0
-nnoremap gl $
+nnoremap W b
 nnoremap gj G
 nnoremap gk gg
 
-vnoremap gh 0
-vnoremap gl $
+nnoremap H 0
+nnoremap L $
+nnoremap J <C-d>
+nnoremap K <C-u>
+
+vnoremap W b
 vnoremap gj G
 vnoremap gk gg
 
-onoremap gh 0
-onoremap gl $
+vnoremap H 0
+vnoremap L $
+vnoremap J <C-d>
+vnoremap K <C-u>
+
+onoremap W b
 onoremap gj G
 onoremap gk gg
 
+onoremap H 0
+onoremap L $
+onoremap J <C-d>
+onoremap K <C-u>
+
 " lsp
 "set omnifunc=v:lua.vim.lsp.omnifunc
-
 "nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 "nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 "nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
@@ -181,16 +198,15 @@ nmap gr <Plug>(coc-references)
 nmap gd <Plug>(coc-definition)
 nmap gs :<C-u>CocList outline<CR>
 nnoremap gS :<C-u>CocList -I symbols<CR>
-nmap K :<C-u>call CocAction('doHover')<CR>
+nmap gh :<C-u>call CocAction('doHover')<CR>
 
-nmap <Leader>rr <Plug>(coc-rename):<C-u>wa<CR>
-nmap <Leader>ra <Plug>(coc-codeaction)
-nmap <Leader>rf <Plug>(coc-fix-current)
-nmap <Leader>rF :call CocAction('format')<CR>
-nmap <Leader>rc :<C-u>CocList commands<CR>
-
-nmap <Leader>dd <Plug>(coc-diagnostic-info)
-nmap <Leader>de <Plug>(coc-diagnostic-next-error) 
+nmap rF :call CocAction('format')<CR>
+nmap rr <Plug>(coc-rename):<C-u>wa<CR>
+nmap ra <Plug>(coc-codeaction)
+nmap rf <Plug>(coc-fix-current)
+nmap rd <Plug>(coc-diagnostic-info)
+nmap re <Plug>(coc-diagnostic-next-error) 
+nmap rc :<C-u>CocList commands<CR>
 
 " session
 function SaveSessionAndClose()
