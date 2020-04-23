@@ -95,14 +95,11 @@ autocmd FileType netrw set nolist|setl bufhidden=wipe
 autocmd FileType netrw nnoremap <buffer> s /|nnoremap <buffer> S ?
 
 " keymaps
-let mapleader="\<Space>"
-
 nnoremap <Esc> :<C-u>nohlsearch<CR>
 nnoremap <C-c> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
-nnoremap <Leader>e :<C-u>Ex.<CR>
-nnoremap <Leader>b :<C-u>b#<CR>
-nnoremap <Leader>0 :<C-u>%bd<CR>
+nnoremap bb :<C-u>b#<CR>
+nnoremap bd :<C-u>%bd<CR>
 
 map Q <Nop>
 map r <Nop>
@@ -186,9 +183,6 @@ inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-nmap <Leader>cd :<C-u>CocList diagnostics<CR>
-nmap <Leader>cc :<C-u>CocCommand<CR>
-
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
@@ -206,6 +200,9 @@ nmap ra <Plug>(coc-codeaction)
 nmap rf <Plug>(coc-fix-current)
 nmap rd <Plug>(coc-diagnostic-info)
 nmap re <Plug>(coc-diagnostic-next-error) 
+
+nmap gc :<C-u>CocCommand<CR>
+nmap rD :<C-u>CocList diagnostics<CR>
 nmap rc :<C-u>CocList commands<CR>
 
 " session
