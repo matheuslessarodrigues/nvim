@@ -101,10 +101,12 @@ nnoremap <C-s> :<C-u>w<CR>
 nnoremap bb :<C-u>b#<CR>
 nnoremap bd :<C-u>%bd<CR>
 
+map <Tab> <C-w><C-w>
 map Q <Nop>
 map r <Nop>
 nnoremap U <C-r>
 nnoremap gv <C-v>
+nnoremap gn *
 
 nnoremap zj zb
 nnoremap zk zt
