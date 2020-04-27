@@ -104,6 +104,7 @@ nnoremap bd :<C-u>%bd<CR>
 map <Tab> <C-w><C-w>
 map Q <Nop>
 map r <Nop>
+map gf <Nop>
 nnoremap U <C-r>
 nnoremap gv <C-v>
 nnoremap gn *
