@@ -122,7 +122,7 @@ nnoremap W b
 nnoremap gj G
 nnoremap gk gg
 
-nnoremap H 0
+nnoremap H ^
 nnoremap L $
 nnoremap J <C-d>
 nnoremap K <C-u>
@@ -131,7 +131,7 @@ vnoremap W b
 vnoremap gj G
 vnoremap gk gg
 
-vnoremap H 0
+vnoremap H ^
 vnoremap L $
 vnoremap J <C-d>
 vnoremap K <C-u>
@@ -140,7 +140,7 @@ onoremap W b
 onoremap gj G
 onoremap gk gg
 
-onoremap H 0
+onoremap H ^
 onoremap L $
 onoremap J <C-d>
 onoremap K <C-u>
