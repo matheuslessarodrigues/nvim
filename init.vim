@@ -102,6 +102,7 @@ nnoremap bb :<C-u>b#<CR>
 nnoremap bd :<C-u>%bd<CR>
 
 map <Tab> <C-w><C-w>
+map q: <Nop>
 map Q <Nop>
 map r <Nop>
 map gf <Nop>
