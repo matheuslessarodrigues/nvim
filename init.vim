@@ -119,35 +119,35 @@ nnoremap S <Nop>
 vnoremap s /
 vnoremap S <Nop>
 
-nnoremap W b
+nnoremap <M-m> b
 nnoremap gj G
 nnoremap gk gg
 nnoremap gb %
 
-nnoremap H ^
-nnoremap L $
-nnoremap J <C-d>
-nnoremap K <C-u>
+nnoremap gh ^
+nnoremap gl $
+nnoremap <M-j> <C-d>
+nnoremap <M-k> <C-u>
 
-vnoremap W b
+vnoremap <M-m> b
 vnoremap gj G
 vnoremap gk gg
 vnoremap gb %
 
-vnoremap H ^
-vnoremap L $
-vnoremap J <C-d>
-vnoremap K <C-u>
+vnoremap gh ^
+vnoremap gl $
+vnoremap <M-j> <C-d>
+vnoremap <M-k> <C-u>
 
-onoremap W b
+onoremap <M-m> b
 onoremap gj G
 onoremap gk gg
 onoremap gb %
 
-onoremap H ^
-onoremap L $
-onoremap J <C-d>
-onoremap K <C-u>
+onoremap gh ^
+onoremap gl $
+onoremap <M-j> <C-d>
+onoremap <M-k> <C-u>
 
 " lsp
 "set omnifunc=v:lua.vim.lsp.omnifunc
@@ -199,7 +199,7 @@ nmap gr <Plug>(coc-references)
 nmap gd <Plug>(coc-definition)
 nmap gs :<C-u>CocList outline<CR>
 nnoremap gS :<C-u>CocList -I symbols<CR>
-nmap gh :<C-u>call CocAction('doHover')<CR>
+nmap gi :<C-u>call CocAction('doHover')<CR>
 
 nmap rF :call CocAction('format')<CR>
 nmap rr <Plug>(coc-rename):<C-u>wa<CR>
