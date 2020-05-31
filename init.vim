@@ -119,7 +119,7 @@ nnoremap S <Nop>
 vnoremap s /
 vnoremap S <Nop>
 
-nnoremap <M-m> b
+nnoremap <M-w> b
 nnoremap gj G
 nnoremap gk gg
 nnoremap gb %
@@ -129,7 +129,7 @@ nnoremap gl $
 nnoremap <M-j> <C-d>
 nnoremap <M-k> <C-u>
 
-vnoremap <M-m> b
+vnoremap <M-w> b
 vnoremap gj G
 vnoremap gk gg
 vnoremap gb %
@@ -139,7 +139,7 @@ vnoremap gl $
 vnoremap <M-j> <C-d>
 vnoremap <M-k> <C-u>
 
-onoremap <M-m> b
+onoremap <M-w> b
 onoremap gj G
 onoremap gk gg
 onoremap gb %
