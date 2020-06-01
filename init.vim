@@ -199,7 +199,7 @@ nmap gr <Plug>(coc-references)
 nmap gd <Plug>(coc-definition)
 nmap gs :<C-u>CocList outline<CR>
 nnoremap gS :<C-u>CocList -I symbols<CR>
-nmap gi :<C-u>call CocAction('doHover')<CR>
+nmap K :<C-u>call CocAction('doHover')<CR>
 
 nmap rF :call CocAction('format')<CR>
 nmap rr <Plug>(coc-rename):<C-u>wa<CR>
