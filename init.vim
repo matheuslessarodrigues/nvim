@@ -98,8 +98,8 @@ autocmd FileType netrw nnoremap <buffer> s /|nnoremap <buffer> S ?
 nnoremap <Esc> :<C-u>nohlsearch<CR>
 nnoremap <C-c> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
-nnoremap bb :<C-u>b#<CR>
-nnoremap bd :<C-u>%bd<CR>
+nnoremap gb :<C-u>b#<CR>
+nnoremap g0 :<C-u>%bd<CR>
 
 map <Tab> <C-w><C-w>
 nnoremap q: <Nop>
@@ -109,6 +109,7 @@ map gf <Nop>
 nnoremap U <C-r>
 nnoremap gv <C-v>
 nnoremap gn *
+nnoremap <A-n>
 
 nnoremap zj zb
 nnoremap zk zt
@@ -119,35 +120,26 @@ nnoremap S <Nop>
 vnoremap s /
 vnoremap S <Nop>
 
-nnoremap <M-w> b
 nnoremap gj G
 nnoremap gk gg
-nnoremap gb %
+nnoremap gm %
 
 nnoremap gh ^
 nnoremap gl $
-nnoremap <M-j> <C-d>
-nnoremap <M-k> <C-u>
 
-vnoremap <M-w> b
 vnoremap gj G
 vnoremap gk gg
-vnoremap gb %
+vnoremap gm %
 
 vnoremap gh ^
 vnoremap gl $
-vnoremap <M-j> <C-d>
-vnoremap <M-k> <C-u>
 
-onoremap <M-w> b
 onoremap gj G
 onoremap gk gg
-onoremap gb %
+onoremap gm %
 
 onoremap gh ^
 onoremap gl $
-onoremap <M-j> <C-d>
-onoremap <M-k> <C-u>
 
 " lsp
 "set omnifunc=v:lua.vim.lsp.omnifunc
