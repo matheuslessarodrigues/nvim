@@ -4,5 +4,6 @@
 	},
 	"list.insertMappings": {
 		"<C-c>": "do:exit"
-	}
+	},
+	"rust-analyzer.serverPath": "rust-analyzer.exe"
 }
