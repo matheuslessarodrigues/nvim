@@ -46,7 +46,7 @@ filetype indent plugin on
 
 autocmd VimLeave * set guicursor=a:block-blinkon1
 autocmd VimResized * wincmd =
-autocmd FocusGained * :silent! noautocmd checktime
+autocmd FocusGained,BufEnter * :silent! noautocmd checktime
 autocmd TermOpen * startinsert
 autocmd TermClose * bd!
 
@@ -98,6 +98,7 @@ autocmd FileType netrw nnoremap <buffer> s /|nnoremap <buffer> S ?
 nnoremap <Esc> :<C-u>nohlsearch<CR>
 nnoremap <C-c> :<C-u>nohlsearch<CR>
 nnoremap <C-s> :<C-u>w<CR>
+nnoremap <C-r> :checktime<CR>
 nnoremap gb :<C-u>b#<CR>
 nnoremap g0 :<C-u>%bd<CR>
 
