@@ -46,7 +46,7 @@ filetype indent plugin on
 
 autocmd VimLeave * set guicursor=a:block-blinkon1
 autocmd VimResized * wincmd =
-autocmd FocusGained,BufEnter * :silent! noautocmd checktime
+autocmd FocusGained * :checktime
 autocmd TermOpen * startinsert
 autocmd TermClose * bd!
 
