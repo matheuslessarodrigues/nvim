@@ -101,6 +101,8 @@ nnoremap <C-s> :<C-u>w<CR>
 nnoremap <C-r> :checktime<CR>
 nnoremap gb :<C-u>b#<CR>
 nnoremap g0 :<C-u>%bd<CR>
+nnoremap d "_d
+vnoremap d "_d
 
 map <Tab> <C-w><C-w>
 nnoremap q: <Nop>
