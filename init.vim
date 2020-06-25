@@ -105,6 +105,8 @@ nnoremap d "_d
 vnoremap d "_d
 nnoremap c "_c
 vnoremap c "_c
+nnoremap x <Nop>
+nnoremap xx dd
 
 map <Tab> <C-w><C-w>
 nnoremap q: <Nop>
