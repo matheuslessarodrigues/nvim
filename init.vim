@@ -103,6 +103,8 @@ nnoremap gb :<C-u>b#<CR>
 nnoremap g0 :<C-u>%bd<CR>
 nnoremap d "_d
 vnoremap d "_d
+nnoremap c "_c
+vnoremap c "_c
 
 map <Tab> <C-w><C-w>
 nnoremap q: <Nop>
