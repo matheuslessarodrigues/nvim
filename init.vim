@@ -115,7 +115,7 @@ map r <Nop>
 map gf <Nop>
 nnoremap U <C-r>
 nnoremap gv <C-v>
-nnoremap gn *Nzz
+nnoremap gn *N
 nnoremap <A-n>
 
 nnoremap zj zb
