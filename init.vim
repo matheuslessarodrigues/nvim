@@ -213,20 +213,3 @@ nmap re <Plug>(coc-diagnostic-next-error)
 nmap gc :<C-u>CocCommand<CR>
 nmap rD :<C-u>CocList diagnostics<CR>
 nmap rc :<C-u>CocList commands<CR>
-
-" session
-function SaveSessionAndClose()
-	:wall
-	:mksession! session.vim
-	:qall
-endfunction
-
-function TryRestoreSession()
-	:if filereadable("session.vim")
-		:source session.vim
-		:call delete("session.vim")
-	:endif
-endfunction
-
-nmap <C-z> :call SaveSessionAndClose()<CR>
-call TryRestoreSession()
