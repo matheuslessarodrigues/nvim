@@ -178,6 +178,8 @@ onoremap gl $
 "EOF
 
 " fzf
+let g:fzf_layout = { 'window': '16split enew' }
+
 nnoremap <C-p> :<C-u>Files<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
