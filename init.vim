@@ -1,4 +1,7 @@
-set shell=$COMSPEC
+if has('win32') || has('win64')
+	set shell=$COMSPEC
+	command Sh call termopen("busybox bash")
+endif
 
 " plugin manager
 call plug#begin()
@@ -50,7 +53,6 @@ autocmd FocusGained * :checktime
 autocmd TermOpen * startinsert
 autocmd TermClose * bd!
 
-command Sh call termopen("busybox bash")
 command Verco :terminal verco<CR>
 
 function UploadSettings()
@@ -108,9 +110,8 @@ vnoremap c "_c
 nnoremap x <Nop>
 nnoremap xx dd
 
-map <Tab> <C-w><C-w>
 nnoremap q: <Nop>
-nnoremap Q <Nop>
+nnoremap Q @q
 map r <Nop>
 map gf <Nop>
 nnoremap U <C-r>
