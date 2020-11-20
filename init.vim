@@ -114,6 +114,7 @@ nnoremap q: <Nop>
 nnoremap Q @q
 map r <Nop>
 map gf <Nop>
+map <C-z> <Nop>
 nnoremap U <C-r>
 nnoremap gv <C-v>
 nnoremap gn *N
