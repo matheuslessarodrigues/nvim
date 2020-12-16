@@ -112,6 +112,8 @@ nnoremap xx dd
 
 nnoremap q: <Nop>
 nnoremap Q @q
+noremap <Insert> <Nop>
+noremap <kInsert> <Nop>
 map r <Nop>
 map gf <Nop>
 map <C-z> <Nop>
