@@ -153,8 +153,8 @@ onoremap gl $
 
 nnoremap RB :!build<CR>
 nnoremap RC :!clean<CR>
-nnoremap RE :!editor<CR>
-nnoremap RR :!run<CR>
+nnoremap RE :silent !editor<CR>
+nnoremap RR :silent !run<CR>
 
 " lsp
 "set omnifunc=v:lua.vim.lsp.omnifunc
