@@ -81,7 +81,7 @@ filetype plugin on
 
 " search down into subfolders
 " provides tab-completion for all file-related tasks
-set path+=**
+set path=**
 
 " display all matching files when we tab complete
 set wildmenu
@@ -190,6 +190,8 @@ let g:fzf_layout = { 'window': '16split enew' }
 nnoremap <C-p> :<C-u>Files<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
+
+nnoremap <C-k> :<C-u>call fzf#vim#files('D:/Unreal/UE_4.26/Engine/Source/Runtime', 0)<CR>
 
 " coc
 let g:coc_global_extensions=['coc-omnisharp', 'coc-rust-analyzer']
