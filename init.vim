@@ -115,7 +115,6 @@ nnoremap Q @q
 noremap <Insert> <Nop>
 noremap <kInsert> <Nop>
 map r <Nop>
-map gf <Nop>
 map <C-z> <Nop>
 nnoremap U <C-r>
 nnoremap gv <C-v>
@@ -151,6 +150,11 @@ onoremap gm %
 
 onoremap gh ^
 onoremap gl $
+
+nnoremap RB :!build<CR>
+nnoremap RC :!clean<CR>
+nnoremap RE :!editor<CR>
+nnoremap RR :!run<CR>
 
 " lsp
 "set omnifunc=v:lua.vim.lsp.omnifunc
