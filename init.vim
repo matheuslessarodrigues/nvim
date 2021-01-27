@@ -109,6 +109,7 @@ nnoremap c "_c
 vnoremap c "_c
 nnoremap x <Nop>
 nnoremap xx dd
+nnoremap gf <Nop>
 
 nnoremap q: <Nop>
 nnoremap Q @q
