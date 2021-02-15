@@ -192,7 +192,7 @@ nnoremap <C-p> :<C-u>Files<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
 
-nnoremap <C-k> :<C-u>call fzf#vim#files('D:/Unreal/UE_4.26/Engine/Source/Runtime', 0)<CR>
+"nnoremap <C-k> :<C-u>call fzf#vim#files('D:/Unreal/UE_4.26/Engine/Source/Runtime', 0)<CR>
 
 " coc
 let g:coc_global_extensions=['coc-omnisharp', 'coc-rust-analyzer']
