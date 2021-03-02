@@ -54,6 +54,7 @@ autocmd TermOpen * startinsert
 autocmd TermClose * bd!
 
 command Verco :terminal verco<CR>
+command Unreal call fzf#vim#files('D:/Unreal/UE_4.26/Engine/Source/Runtime', 0)
 
 function UploadSettings()
 	let root = getcwd()
@@ -157,42 +158,12 @@ nnoremap RC :!clean<CR>
 nnoremap RE :silent !editor<CR>
 nnoremap RR :silent !run<CR>
 
-" lsp
-"set omnifunc=v:lua.vim.lsp.omnifunc
-"nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-"nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-"nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-"nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-"nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-"nnoremap <silent> gt <cmd>lua vim.lsp.buf.type_definition()<CR>
-"nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-"nnoremap <silent> gs <cmd>lua vim.lsp.buf.document_symbol()<CR>
-
-"lua << EOF
-"local nvim_lsp = require'nvim_lsp'
-"local configs = require'nvim_lsp/configs'
-
-"nvim_lsp.rust_analyzer.setup{}
-
-"configs.omnisharp_lsp = {
-"	default_config = {
-"		cmd = {'omnisharp'};
-"		filetypes = {'cs'};
-"		root_dir = nvim_lsp.util.root_pattern('*.sln');
-"		settings = {};
-"	};
-"}
-"nvim_lsp.omnisharp_lsp.setup{}
-"EOF
-
 " fzf
 let g:fzf_layout = { 'window': '16split enew' }
 
 nnoremap <C-p> :<C-u>Files<CR>
 nnoremap <C-b> :<C-u>Buffers<CR>
 nnoremap <C-f> :<C-u>Rg 
-
-"nnoremap <C-k> :<C-u>call fzf#vim#files('D:/Unreal/UE_4.26/Engine/Source/Runtime', 0)<CR>
 
 " coc
 let g:coc_global_extensions=['coc-omnisharp', 'coc-rust-analyzer']
